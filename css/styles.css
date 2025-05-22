@@ -259,6 +259,7 @@ main {
           right: 15px;
           font-size: 1.3rem;
           color: rgb(189, 28, 28);
+          cursor: pointer;
         }
 
         .heartProduct{
@@ -266,6 +267,7 @@ main {
           top: 15px;
           right: 15px;
           font-size: 1.3rem;
+          cursor: pointer;
         }
 
         .contentProduct {
