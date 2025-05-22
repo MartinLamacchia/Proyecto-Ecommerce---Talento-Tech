@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  /* font-family: "League Spartan", sans-serif; */
+}
+
+/* HEADER Y NAV */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.topNav {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.nav {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+
+  a {
+    text-decoration: none;
+
+    h2 {
+      color: #000000;
+    }
+  }
+
+  .containerOptions {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding-left: 7rem;
+
+    a {
+      text-decoration: none;
+
+      li {
+        color: #000000;
+      }
+    }
+  }
+
+  .containerItems {
+    display: flex;
+    gap: 1rem;
+
+    .containerSearch {
+      position: relative;
+
+      input {
+        width: 12rem;
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        border: 1px solid #333333;
+        outline: none;
+      }
+
+      .iconSearch {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        cursor: pointer;
+      }
+    }
+
+    .containerIcons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      a {
+        text-decoration: none;
+
+        i {
+          color: #000000;
+          font-size: 1.2rem;
+        }
+
+
+      }
+      .containerHeart{
+        position: relative;
+
+        span{
+          position: absolute;
+          font-size: 0.8rem;
+          bottom: -4px;
+          right: -6px;
+          z-index: 9;
+          background-color:rgba(189, 28, 28,0.8);
+          color: #ffffff;
+          width: 17px;
+          text-align: center;
+          border-radius: 50%;
+        }
+      }
+
+      i {
+        color: #000000;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+/* MAIN PAGE HOME */
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* SECTION HERO */
+  .hero {
+    background-image: url(../images/hero.png);
+    width: 100%;
+    height: calc(100vh - 7.5rem);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+
+    .containerApple {
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 5rem;
+      gap: 3rem;
+
+      i {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-family: "League Spartan", sans-serif;
+      }
+    }
+
+    .voucher {
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 3rem;
+      flex-wrap: wrap;
+
+      p {
+        font-size: 3rem;
+      }
+    }
+
+    .buyNow {
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 3rem;
+      flex-wrap: wrap;
+
+      p {
+        font-size: 2rem;
+        border-bottom: 4px solid #ffffff;
+      }
+    }
+  }
+
+  /* SECTION CATEGORY */
+
+  .categorys {
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 5rem;
+    gap: 1rem;
+
+    h3 {
+      color: #11335a;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    .containerCategories {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .products {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5rem 5rem;
+    gap: 1rem;
+
+    h3 {
+      color: #11335a;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    .containerProducts {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem 3rem;
+      
+
+      .containerProduct {
+        padding: 1rem;
+        border: 1px solid #333333;
+        border-radius: 10px;
+        box-shadow: 10px 9px 20px 3px rgba(0, 0, 0, 0.63);
+        -webkit-box-shadow: 10px 9px 20px 3px rgba(0, 0, 0, 0.63);
+        -moz-box-shadow: 10px 9px 20px 3px rgba(0, 0, 0, 0.63);
+        position: relative;
+
+        .heartSolidProduct{
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          font-size: 1.3rem;
+          color: rgb(189, 28, 28);
+        }
+
+        .heartProduct{
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          font-size: 1.3rem;
+        }
+
+        .contentProduct {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 1rem;
+
+          .contentText {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            p {
+              font-size: 1.3rem;
+            }
+          }
+
+          button {
+            padding: 0.5rem 2rem;
+            border-radius: 10px;
+            border: none;
+            background-color: #11335a;
+            color: #ffffff;
+            font-family: "League Spartan", sans-serif;
+            letter-spacing: 1.5px;
+            transition: all 300ms ease;
+            cursor: pointer;
+          }
+
+          button:hover {
+            background-color: #1e67a3;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* FOOTER HOME */
+
+footer {
+  width: 100%;
+  height: 18rem;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 0 3rem;
+
+  .aboutUsFooter {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .support {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    .containerSupportItem {
+      width: 90%;
+      display: flex;
+
+      .supportItem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
+
+/* HEADER PAGE CONTACT */
+
+.containerOptionsContact {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+
+  a {
+    text-decoration: none;
+
+    li {
+      color: #000000;
+    }
+  }
+}
+
+/* MAIN PAGE CONTACT */
+
+.contact{
+  background-image: url(../images/contactus2.jpg);
+  width: 100%;
+  height: calc(100vh - 5rem);
+  background-position: center;
+  background-size: cover;
+}
+
+.form{
+  width: 80%;
+  height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.containerInput{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.containerInput input{
+  width: 100%;
+  padding: 0.5rem 1rem ;
+  border-radius: 20px;
+  border: 1px solid #555555;
+  outline: none;
+  font-family: "League Spartan", sans-serif;
+}
+
+.containerInput textarea{
+  width: 100%;
+  height: 5rem;
+  padding: 0.5rem 1rem ;
+  border-radius: 20px;
+  border: 1px solid #555555;
+  outline: none;
+  resize: none;
+  font-family: "League Spartan", sans-serif;
+}
+
+.containerInput button{
+  padding: 0.5rem 3rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #11335a;
+  color: #ffffff;
+  font-family: "League Spartan", sans-serif;
+  letter-spacing: 1.5px;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+.containerInput button:hover{
+  background-color: #1e67a3;
+  color: #000000;
+}
