@@ -28,6 +28,10 @@ header {
   color: #ffffff;
 }
 
+.navMovil {
+  display: none;
+}
+
 .nav {
   width: 100%;
   height: 5rem;
@@ -94,19 +98,17 @@ header {
           color: #000000;
           font-size: 1.2rem;
         }
-
-
       }
-      .containerHeart{
+      .containerHeart {
         position: relative;
 
-        span{
+        span {
           position: absolute;
           font-size: 0.8rem;
           bottom: -4px;
           right: -6px;
           z-index: 9;
-          background-color:rgba(189, 28, 28,0.8);
+          background-color: rgba(189, 28, 28, 0.8);
           color: #ffffff;
           width: 17px;
           text-align: center;
@@ -242,7 +244,6 @@ main {
       align-items: center;
       flex-wrap: wrap;
       gap: 2rem 3rem;
-      
 
       .containerProduct {
         padding: 1rem;
@@ -253,7 +254,7 @@ main {
         -moz-box-shadow: 10px 9px 20px 3px rgba(0, 0, 0, 0.63);
         position: relative;
 
-        .heartSolidProduct{
+        .heartSolidProduct {
           position: absolute;
           top: 15px;
           right: 15px;
@@ -262,7 +263,7 @@ main {
           cursor: pointer;
         }
 
-        .heartProduct{
+        .heartProduct {
           position: absolute;
           top: 15px;
           right: 15px;
@@ -377,7 +378,7 @@ footer {
 
 /* MAIN PAGE CONTACT */
 
-.contact{
+.contact {
   background-image: url(../images/contactus2.jpg);
   width: 100%;
   height: calc(100vh - 5rem);
@@ -385,7 +386,7 @@ footer {
   background-size: cover;
 }
 
-.form{
+.form {
   width: 80%;
   height: calc(100vh - 5rem);
   display: flex;
@@ -394,7 +395,7 @@ footer {
   align-items: flex-end;
 }
 
-.containerInput{
+.containerInput {
   width: 20%;
   display: flex;
   flex-direction: column;
@@ -403,19 +404,19 @@ footer {
   gap: 1.2rem;
 }
 
-.containerInput input{
+.containerInput input {
   width: 100%;
-  padding: 0.5rem 1rem ;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
   border: 1px solid #555555;
   outline: none;
   font-family: "League Spartan", sans-serif;
 }
 
-.containerInput textarea{
+.containerInput textarea {
   width: 100%;
   height: 5rem;
-  padding: 0.5rem 1rem ;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
   border: 1px solid #555555;
   outline: none;
@@ -423,7 +424,7 @@ footer {
   font-family: "League Spartan", sans-serif;
 }
 
-.containerInput button{
+.containerInput button {
   padding: 0.5rem 3rem;
   border-radius: 10px;
   border: none;
@@ -435,7 +436,158 @@ footer {
   cursor: pointer;
 }
 
-.containerInput button:hover{
+.containerInput button:hover {
   background-color: #1e67a3;
   color: #000000;
+}
+
+/* Responsive */
+
+@media (max-width: 867px) {
+  .nav {
+    .containerOptions {
+      padding-left: 0rem;
+    }
+  }
+
+  main {
+    .hero {
+      .voucher {
+        p {
+          font-size: 2rem;
+        }
+      }
+      .buyNow {
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  footer {
+    height: auto;
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 2rem 3rem;
+
+    .aboutUsFooter {
+      width: 75%;
+      align-items: center;
+
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 785px) {
+
+  .topNav{
+    p{
+      font-size: 0.8rem;
+    }
+  }
+
+  .navMovil {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    a {
+      text-decoration: none;
+  
+      h2 {
+        color: #000000;
+      }
+    }
+
+    i{
+      font-size: 1.5rem;
+    }
+  }
+
+  .nav {
+    display: none;
+  }
+
+  main{
+    .hero {
+      .containerApple {
+        padding-left: 2.5rem;
+        gap: 1.5rem;
+  
+        i {
+          font-size: 2.5rem;
+        }
+  
+        h2 {
+          font-size: 2rem;
+          font-family: "League Spartan", sans-serif;
+        }
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 655px) {
+
+  .topNav{
+    p{
+      font-size: 0.6rem;
+    }
+  }
+
+  main{
+    .hero{
+
+      .containerApple{
+        h2{
+          font-size: 1.5rem;
+        }
+
+        i{
+          font-size: 1.5rem;
+        }
+      }
+
+      .voucher {
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      .buyNow {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  footer {
+    height: auto;
+    flex-direction: column;
+    padding: 0.5rem 0.5rem;
+    gap: 1.5rem 2rem;
+
+    .aboutUsFooter {
+      width: 100%;
+      text-align: center;
+    }
+
+    .support{
+      width: 100%;
+
+      .containerSupportItem{
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+    }
+  }
+
 }
