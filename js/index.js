@@ -269,14 +269,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Evento para finalizar la compra
   btnFinalizePurchase.addEventListener("click", () => {
     let productCart = JSON.parse(localStorage.getItem("CartOfBuy")) || [];
-    finalizePurchase.innerHTML = ""
+    finalizePurchase.innerHTML = "";
     const totalPurchaseID = document
       .getElementById("totalPurchase")
       .textContent.slice(1);
 
     let totalPurchase = productCart.reduce((total, product) => {
-        return total + product.price * product.amountToCart;
-      }, 0);
+      return total + product.price * product.amountToCart;
+    }, 0);
 
     if (totalPurchaseID < 1) {
       const div = document.createElement("div");
@@ -287,7 +287,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         `;
       finalizePurchase.appendChild(div);
       finalizePurchase.style.display = "flex";
-    }else {
+
+      // Evento para cerrar el popup de finalizar compra
+      const closeFinalizePurchase = document.getElementById(
+        "closeFinalizePurchase"
+      );
+      closeFinalizePurchase.addEventListener("click", () => {
+        finalizePurchase.style.display = "none";
+      });
+    } else {
       const div = document.createElement("div");
       div.className = "contentFinalizePurchase";
       div.innerHTML = `
@@ -300,35 +308,27 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <button>Finalizar Compra</button>
                       </form>
-                      `
+                      `;
       finalizePurchase.appendChild(div);
       finalizePurchase.style.display = "flex";
     }
 
     // Evento para confirmar la compra
-    const formConfirmPurchase = document.getElementById("formConfirmPurchase")
+    const formConfirmPurchase = document.getElementById("formConfirmPurchase");
     formConfirmPurchase.addEventListener("submit", (e) => {
-      e.preventDefault()
+      e.preventDefault();
 
-      const inputName = document.getElementById("inputName").value.trim()
-      const inputEmail = document.getElementById("inputEmail").value.trim()
+      const inputName = document.getElementById("inputName").value.trim();
+      const inputEmail = document.getElementById("inputEmail").value.trim();
 
       if (!inputName || !inputEmail) {
-        alert("No coloco el nombre o email")
-        return
+        alert("No coloco el nombre o email");
+        return;
       }
 
-      alert("Finalizada la compra con exito")
-      localStorage.removeItem('CartOfBuy')
-      paintToCart()
-      finalizePurchase.style.display = "none";
-    })
-
-    // Evento para cerrar el popup de finalizar compra
-    const closeFinalizePurchase = document.getElementById(
-      "closeFinalizePurchase"
-    );
-    closeFinalizePurchase.addEventListener("click", () => {
+      alert("Finalizada la compra con exito");
+      localStorage.removeItem("CartOfBuy");
+      paintToCart();
       finalizePurchase.style.display = "none";
     });
   });
